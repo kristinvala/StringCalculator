@@ -58,16 +58,15 @@ public class CalculatorTest {
     		String message = "Negatives not allowed: -4";
     		assertEquals(message, e.getMessage());
     	}
-    	
     }
 
     @Test
     public void testMultipleNegativeNumber() throws Exception{
     	try{
-    		assertEquals(-4, Calculator.add("-4\n1,2"));
+    		assertEquals(-3, Calculator.add("-4\n-1,2"));
 
     	}catch(Exception e){
-    		String message = "Negatives not allowed: -4";
+    		String message = "Negatives not allowed: -4,-1";
     		assertEquals(message, e.getMessage());
     	}
     }
