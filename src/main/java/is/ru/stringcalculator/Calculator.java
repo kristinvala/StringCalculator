@@ -30,10 +30,13 @@ public class Calculator {
 		    	neg = neg + "," + number;
 			}
 		}
+
  	 
  	 	if(neg == null){
 		   	for(String number : numbers){
+		   		if(toInt(number) < 1000){
 		   		 total += toInt(number);
+		   		}
 			}
 		}
 		else{
