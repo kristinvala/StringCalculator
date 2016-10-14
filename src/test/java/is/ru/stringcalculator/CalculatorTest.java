@@ -49,6 +49,29 @@ public class CalculatorTest {
     	assertEquals(4, Calculator.add("1\n3"));
     }
 
+    @Test
+    public void testNegativeNumber() throws Exception{
+    	try{
+    		assertEquals(-4, Calculator.add("-4"));
+
+    	}catch(Exception e){
+    		String message = "Negatives not allowed: -4";
+    		assertEquals(message, e.getMessage());
+    	}
+    	
+    }
+
+    @Test
+    public void testMultipleNegativeNumber() throws Exception{
+    	try{
+    		assertEquals(-4, Calculator.add("-4\n1,2"));
+
+    	}catch(Exception e){
+    		String message = "Negatives not allowed: -4";
+    		assertEquals(message, e.getMessage());
+    	}
+    }
+
 
 
 }

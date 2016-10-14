@@ -20,9 +20,16 @@ public class Calculator {
 	private static String[] splitNumbers(String numbers){
 	    return numbers.split(",|\n");
 	}
-      
+
     private static int sum(String[] numbers){
  	    int total = 0;
+
+ 	    for(String number : numbers){
+		    if(toInt(number) < 0){
+				throw new IllegalArgumentException("Negatives not allowed: " + toInt(number));
+			}
+		}
+ 	 
         for(String number : numbers){
 		    total += toInt(number);
 		}
