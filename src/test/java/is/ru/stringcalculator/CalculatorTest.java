@@ -81,6 +81,11 @@ public class CalculatorTest {
     	assertEquals(5, Calculator.add("1001,1002,3,2"));
     }
 
+	@Test
+    public void testDelimeter(){
+    	assertEquals(3, Calculator.add("//;n1;2"));
+    }
+
 
 
 }
